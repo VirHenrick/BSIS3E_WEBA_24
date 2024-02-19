@@ -1,14 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<php?
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+require '../app/core/init.php';
 
-<body>
-  <p>Hello World</p>
-</body>
-
-</html>
+$app = new App();
