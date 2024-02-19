@@ -2,4 +2,4 @@
 
 require '../app/core/init.php';
 
-$app = new App()
+$app = new App();
