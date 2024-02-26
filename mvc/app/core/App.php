@@ -1,7 +1,6 @@
 <?php
 class App
 {
-
   protected $controller = 'Home';
   protected $method = 'index';
   protected $params = [];
@@ -16,9 +15,8 @@ class App
 
         $this->controller = ucfirst($url[0]);
         unset($url[0]);
-      }
-      else{
-        require '../app/controllers/_404.php';
+      } else {
+        $this->controller = '_404';
       }
     }
 
@@ -27,7 +25,7 @@ class App
 
     if (isset($url[1])) {
       if (method_exists($this->controller, $url[1])) {
-        
+
       }
     }
     $this->params = $url ? array_values($url) : [];
