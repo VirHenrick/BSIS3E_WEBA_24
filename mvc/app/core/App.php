@@ -20,6 +20,8 @@ class App
 
                 $this->controller = ucfirst($url[0]);
                 unset($url[0]);
+            } else {
+                $this->controller = '_404';
             }
         }
 
@@ -32,7 +34,7 @@ class App
                 
                 $this->method = $url[1];
                 unset($url[1]);
-            }
+            } 
         }
 
         $this->params = $url ? array_values($url) : [];
