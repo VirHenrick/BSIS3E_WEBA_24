@@ -2,7 +2,7 @@
 
 class controller
 {
-    public funcgit pultion view($name)
+    public function view($name)
     {
         if (file_exists('../app/views/' . $name . '.php')) {
 
