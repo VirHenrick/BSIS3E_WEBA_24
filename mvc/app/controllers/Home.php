@@ -5,7 +5,7 @@ class Home extends Controller
     public function index()
     {
         $model = new Model();
-        $arr['lastname'] = 'Tagulao';
+        $arr['firstname'] = 'Erwingit';
         $data = $model->where($arr);
         show($data);
 
