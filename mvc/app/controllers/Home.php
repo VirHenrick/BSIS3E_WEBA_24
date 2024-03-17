@@ -3,12 +3,9 @@ class Home extends Controller
 {
   public function index()
   {
-    $model = new Model();
-    $arr['firstname'] = '';
-    $data = $model->where($arr);
-    $data = $model->findAll();
+    $user = new User();
+    $data = $user->findAll();
     show($data);
-
     $this->view('home');
   }
 }
