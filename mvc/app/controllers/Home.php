@@ -1,13 +1,13 @@
 <?php
+
 class Home extends Controller
 {
-  public function index()
-  {
-    $user = new User();
-    $arr['firstname'] = 'jhay arron';
-    $data = $user->findAll($arr);
-    show($data);
+    public function index()
+    {
+        $user = new User();
+        $data = $user->findAll();
+        show($data);
 
-    $this->view('home');
-  }
+       $this->view('home');
+    } 
 }

@@ -1,29 +1,29 @@
 <?php
 
-    class Database
+class Database
+{
+    public function connect()
     {
-        public function connect()
-        {
-            $string = "mysql:host=localhost;dbname=mvc_bsis3e";
-            $con = new PDO($string, 'root', '');
-            return $con;
-        }
+        $string = "mysql:host=localhost;dbname=mvc_bsis3e";
+        $con = new PDO($string, 'root', '');
+        return $con;
+    }
     
-
-    public function query($query , $data = [])
+    public function query ($query, $data = [])
     {
         $con = $this->connect();
         $stm = $con->prepare($query);
 
         $check = $stm->execute($data);
 
-        if ($check){
+        if ($check) {
             $result = $stm->fetchAll(PDO::FETCH_OBJ);
 
-            if (is_array($result) && count($result) > 0){
+            if (is_array($result) && count($result) > 0) {
                 return $result;
             }
         }
         return false;
+
     }
 }
