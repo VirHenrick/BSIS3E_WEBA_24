@@ -4,8 +4,8 @@ class Database
 {
     public function connect()
     {
-        $string = "mysql:host=" . DB_HOST . ";dbname=" . DB_NAME;
-        $con = new PDO($string, DB_USER, DB_PASS);
+        $string = "mysql:host=localhost;dbname=mvc_bsis3e";
+        $con = new PDO($string, 'root', '');
         return $con;
     }
     
