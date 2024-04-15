@@ -6,7 +6,6 @@ class Home extends Controller
     {
         $user = new User();
         $data = $user->findAll();
-        show($data);
 
        $this->view('home');
     } 

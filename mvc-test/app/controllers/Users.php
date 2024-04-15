@@ -33,15 +33,43 @@ class Users extends controller
         $this->view('users/create');
        }
 
-    public function edit($id) {
+    public function edit($id) 
+    {
 
         $x = new User();
-
         $arr['id'] = $id;
-
         $row = $x->first($arr);
 
+        if(isset($_POST['edit'])) {
+
+        $arr['firstname'] = $_POST['firstname'];
+        $arr['lastname'] = $_POST['lastname'];
+        $arr['email'] = $_POST['email'];
+        $arr['password'] = $_POST['password'];
+
+        $x->update($id, $arr);
+
+        redirect('users');
+        }
+
         $this->view('users/edit', [
+            'user' => $row
+        ]);
+    }
+
+    public function delete($id)
+    {
+        $x = new User();
+        $arr['id'] = $id;
+        $row = $x->first($arr);
+
+        if(isset($_POST['delete'])) {
+
+            $x->delete($id);
+            redirect('users');
+        }
+
+        $this->view('users/delete', [
             'user' => $row
         ]);
     }

@@ -25,6 +25,7 @@
             <td><?= $item->email ?></td>
             <td>
                 <a href="<?=ROOT?>/users/edit/<?= $item->id?>" class="btn btn-success btn-sm">Edit</a>
+                <a href="<?=ROOT?>/users/delete/<?= $item->id?>" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
         <?php }?>
