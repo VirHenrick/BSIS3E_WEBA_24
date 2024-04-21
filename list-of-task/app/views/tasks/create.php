@@ -3,7 +3,7 @@
     <div class="container">
 
         <form action="" method="POST" class="mt-5 w-50 mx-auto">
-            <h2>Create User</h2>
+            <h2>Create Task</h2>
     <div class="mb-2">
         <label for="">Task Name</label>
         <input name="task_name" type="text" class="form-control">
