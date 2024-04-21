@@ -20,7 +20,7 @@
   <label for="">Password</label>
   <input name="password" disabled value="<?= $user->password ?>" type="password" class="form-control">
 </div>
-<button name="delete" type="submit" class="btn btn-danger">Update</button>
+<button name="delete" type="submit" class="btn btn-danger">Delete</button>
 </div>
 
 <?php include PATH."partials/footer.php" ?>

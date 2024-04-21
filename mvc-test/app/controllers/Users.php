@@ -35,12 +35,11 @@ class Users extends controller
 
     public function edit($id) 
     {
-
         $x = new User();
         $arr['id'] = $id;
         $row = $x->first($arr);
 
-        if(isset($_POST['edit'])) {
+        if(isset($_POST['update'])) {
 
         $arr['firstname'] = $_POST['firstname'];
         $arr['lastname'] = $_POST['lastname'];
@@ -56,6 +55,7 @@ class Users extends controller
             'user' => $row
         ]);
     }
+
 
     public function delete($id)
     {
@@ -74,4 +74,6 @@ class Users extends controller
         ]);
     }
   }
+
+ 
 

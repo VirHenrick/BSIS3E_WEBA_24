@@ -82,7 +82,7 @@ class Model extends Database
         return false;
     }
 
-    public function update($id, $data, $column = 'id')
+    /*public function update($id, $data, $column = 'id')
     {
         $keys = array_keys($data);
         $query = "update $this->table set";
@@ -99,7 +99,33 @@ class Model extends Database
     $this->query($query, $data);
 
     return false;
+}*/
+
+public function update($id, $data, $column = 'id')
+{
+    $keys = array_keys($data);
+    $query = "UPDATE $this->table SET ";
+
+    
+    foreach ($keys as $key) {
+        $query .= "$key = :$key, ";
+    }
+
+ 
+    $query = rtrim($query, ', ');
+
+
+    $query .= " WHERE $column = :$column";
+
+ 
+    $data[$column] = $id;
+
+
+    $this->query($query, $data);
+
+    return true;
 }
+
     public function delete($id, $column = 'id')
     {
         $data[$column] = $id;
