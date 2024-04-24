@@ -4,18 +4,62 @@ class Users extends Controller
 {
     public function index()
     {
-     $user = new User();
-     if (isset($_POST['btnSubmit'])) {
+     $x = new User();
+     $rows = $x->findAll();
 
-     $arr['firstname'] = $_POST['firstname'];
-     $arr['lastname'] = $_POST['lastname'];
-     $arr['email'] = $_POST['email'];
-     $arr['password'] = $_POST['password'];
+       $this->view('users/index', [
+         'users' => $rows 
+       ]);
+    } 
 
-     $user->insert($arr);
+    public function create(){
 
+      $x = new User();
+
+      if(count($_POST) > 0) {
+
+        $x->insert($_POST);
+
+        redirect('users');
+      } 
+
+      $this->view('users/create');
+    }
+    
+    public function edit($id){
+
+      $x = new User();
+      $arr['id'] = $id;
+      $row = $x->first($arr);
+
+      if(count($_POST) > 0) {
+
+        $x->update($id, $_POST);
+
+        redirect('users');
+      }
+
+      $this->view('users/edit', [
+        'user' => $row
+      ]);
     }
 
-       $this->view('users');
-    } 
+    public function delete($id)
+    {
+      $x = new User();
+      
+      $arr['id'] = $id;
+
+      $row = $x->first($arr);
+
+      if (count($_POST) > 0) {
+
+        $x->delete($id);
+        redirect('users');
+      }
+
+      $this->view('users/delete', [
+        'user' => $row
+      ]);
+    }
 }

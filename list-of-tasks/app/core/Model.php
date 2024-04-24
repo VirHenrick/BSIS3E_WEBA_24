@@ -12,7 +12,7 @@ class Model extends Database
     public function findAll()
     {
 
-        $query = "select * from users";
+        $query = "select * from tasks";
 
         $result = $this->query($query);
 
@@ -27,7 +27,7 @@ class Model extends Database
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
 
-        $query = "select * from users where ";
+        $query = "select * from tasks where ";
 
         foreach ($keys as $key) {
             $query .= $key . " = :" . $key . " && ";
@@ -46,13 +46,13 @@ class Model extends Database
         }
         return false;
     }
-
+    
     public function first($data, $data_not = [])
     {
         $keys = array_keys($data);
         $keys_not = array_keys($data_not);
 
-        $query = "select * from users where ";
+        $query = "select * from tasks where ";
 
         foreach ($keys as $key) {
             $query .= $key . " = :" . $key . " && ";
@@ -71,13 +71,12 @@ class Model extends Database
         }
         return false;
     }
-    
     public function insert($data)
     {
         $columns = implode(', ', array_keys($data));
         $values = implode(', :', array_keys($data));
         $query = "insert into $this->table ($columns) values (:$values)";
-        
+        show($query);
         $this->query($query, $data);
 
         return false;
@@ -86,21 +85,27 @@ class Model extends Database
     public function update($id, $data, $column = 'id')
     {
         $keys = array_keys($data);
-        $query = "update $this->table set";
-
+        $query = "UPDATE $this->table SET ";
+    
+        
         foreach ($keys as $key) {
-            $query .= $key . " = :" . $key . ", ";
+            $query .= "$key = :$key, ";
         }
-
-    $query = trim($query, ", ");
-
-    $query .= " where $column = :$column";
-
-    $data[$column] = $id;
-    $this->query($query, $data);
-
-    return false;
-}
+    
+     
+        $query = trim($query, ', ');
+    
+    
+        $query .= " WHERE $column = :$column";
+    
+     
+        $data[$column] = $id;
+    
+    
+        $this->query($query, $data);
+    
+        return true;
+    }
     public function delete($id, $column = 'id')
     {
         $data[$column] = $id;
