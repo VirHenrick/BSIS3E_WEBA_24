@@ -1,9 +1,9 @@
-<h2>Delete Page</h2>
+
 <?php include PATH."partials/header.php" ?>
 
 <div class="container">
   <form action="" method="POST" class="mt-5 w-50 mx-auto">
-      <h2>Delete User</h2>
+      <h2>Delete Tasks</h2>
 <div class="mb-2">
   <label for="">Task Name</label>
   <input name="task_name" disabled value="<?= $row->task_name ?>" type="text" class="form-control">
