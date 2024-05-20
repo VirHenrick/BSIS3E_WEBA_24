@@ -1,0 +1,17 @@
+body {
+  background-image: url('../images/userbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-color: #d4edda; /* Light green background */
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.6); /* White background with 80% opacity */
+  padding: 1px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  width: 200%; /* Adjust the width as needed */
+  max-width: 600px; /* Optional: limits the maximum width */
+}

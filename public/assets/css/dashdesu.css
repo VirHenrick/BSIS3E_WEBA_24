@@ -1,0 +1,84 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+  background-image: url('../images/stocker.jpg'); /* Pharmacy-themed background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+  font-family: Arial, sans-serif;
+}
+
+/* Container Styling */
+.container {
+  background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+.health-themed-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.health-themed-table th, .health-themed-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd;
+}
+
+.health-themed-table th {
+  background-color: #2e7d32; /* Dark green background for headers */
+  color: #ffffff; /* White text */
+  font-weight: bold;
+}
+
+.health-themed-table tr:nth-of-type(even) {
+  background-color: #f3f3f3; /* Light grey background for even rows */
+}
+
+.health-themed-table tr:hover {
+  background-color: #a5d6a7; /* Light green background on hover */
+}
+
+.health-themed-table td {
+  color: #333333; /* Dark text color */
+}
+
+.health-themed-table td a.btn {
+  margin-right: 5px;
+}
+
+.health-themed-table td a.btn-success {
+  background-color: #388e3c; /* Dark green button */
+  border-color: #388e3c; /* Dark green border */
+}
+
+.health-themed-table td a.btn-success:hover {
+  background-color: #2e7d32; /* Darker green on hover */
+  border-color: #2e7d32; /* Darker green border on hover */
+}
+
+.health-themed-table td a.btn-danger {
+  background-color: #d32f2f; /* Red button */
+  border-color: #d32f2f; /* Red border */
+}
+
+.health-themed-table td a.btn-danger:hover {
+  background-color: #b71c1c; /* Darker red on hover */
+  border-color: #b71c1c; /* Darker red border on hover */
+}
+
+/* Add Button Styling */
+.container .btn-primary {
+  background-color: #2e7d32; /* Dark green background */
+  border-color: #2e7d32; /* Dark green border */
+}
+
+.container .btn-primary:hover {
+  background-color: #1b5e20; /* Darker green on hover */
+  border-color: #1b5e20; /* Darker green border on hover */
+}

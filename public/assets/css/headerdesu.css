@@ -1,0 +1,37 @@
+/* style.css */
+
+/* Navbar Styling */
+.custom-navbar {
+  background-color: #e8f5e9; /* Light green background */
+}
+
+.custom-navbar .navbar-nav .nav-link {
+  color: #2e7d32; /* Dark green color for nav links */
+  font-weight: bold;
+}
+
+.custom-navbar .navbar-nav .nav-link:hover {
+  color: #1b5e20; /* Darker green on hover */
+  background-color: #a5d6a7; /* Light green background on hover */
+  border-radius: 5px;
+}
+
+.custom-navbar .navbar-nav .nav-link.active {
+  color: #1b5e20; /* Darker green for active link */
+}
+
+.custom-navbar .btn-secondary {
+  background-color: #2e7d32; /* Dark green background for buttons */
+  border-color: #2e7d32; /* Dark green border for buttons */
+}
+
+.custom-navbar .btn-secondary:hover {
+  background-color: #1b5e20; /* Darker green on hover */
+  border-color: #1b5e20; /* Darker green border on hover */
+}
+
+
+/* Navbar Toggler Icon */
+.custom-navbar .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(46, 125, 50, 0.7)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}

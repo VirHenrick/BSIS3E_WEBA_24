@@ -1,0 +1,60 @@
+/* style.css */
+
+/* General Body Styling */
+body {
+  background-image: url('../images/login2bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Form Container */
+.pharmacy-form {
+  background-color: #e8f5e9; /* Light green background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.pharmacy-form h2 {
+  color: #2e7d32; /* Dark green color */
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.pharmacy-input {
+  border: 1px solid #a5d6a7; /* Light green border */
+  border-radius: 5px;
+}
+
+/* Input Field Labels */
+.pharmacy-form .form-label {
+  color: #2e7d32; /* Dark green color */
+}
+
+/* Submit Button */
+.pharmacy-button {
+  background-color: #2e7d32; /* Dark green background */
+  border-color: #2e7d32; /* Dark green border */
+}
+
+.pharmacy-button:hover {
+  background-color: #1b5e20; /* Darker green on hover */
+}
+
+/* Alert Box */
+.alert-warning {
+  background-color: #fff3cd; /* Light yellow background */
+  border-color: #ffecb5; /* Light yellow border */
+  color: #856404; /* Dark yellow text */
+}
+
+.btn-close {
+  background-color: #2e7d32; /* Dark green close button */
+}
