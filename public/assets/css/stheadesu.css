@@ -1,0 +1,74 @@
+
+/* stheadesu.css */
+
+/* Main navbar styling */
+body{
+  background-image: url('../images/stsale.jpeg'); /* Pharmacy-themed background image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.6); /* White background with 90% opacity */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.navbar {
+  background-color: #28a745; /* Green background color */
+}
+
+.navbar .navbar-brand img {
+  width: 80px; /* Adjust logo size */
+}
+
+.navbar-toggler {
+  border-color: #ffffff; /* White border for toggle button */
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  /* White icon for toggle button */
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff; /* White color for links */
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff; /* White underline for active link */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d4edda; /* Light green hover effect */
+}
+
+.btn-secondary {
+  background-color: #155724; /* Dark green button background */
+  border-color: #155724; /* Dark green button border */
+}
+
+.btn-secondary:hover {
+  background-color: #19692c; /* Slightly lighter green on hover */
+  border-color: #19692c; /* Match border color on hover */
+}
+
+/* Adjust container padding */
+.container {
+  padding: 0 15px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 992px) {
+  .navbar .navbar-collapse {
+    background-color: #28a745; /* Green background for collapsed menu */
+  }
+  .navbar-nav .nav-link {
+    color: #ffffff; /* White color for links in collapsed menu */
+  }
+  .btn-secondary {
+    margin-top: 10px; /* Add margin for logout button in collapsed menu */
+  }
+}

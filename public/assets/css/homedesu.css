@@ -1,0 +1,41 @@
+/* Custom CSS for health-themed landing page */
+.landing-page {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+.container h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.container p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.container .btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.container .btn-primary:hover {
+  background-color: #45a049;
+  border-color: #45a049;
+}
+
+/* Carousel styles */
+.carousel-item img {
+  height: 70vh;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}

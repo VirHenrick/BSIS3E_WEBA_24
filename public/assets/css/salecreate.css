@@ -1,0 +1,56 @@
+/* salecreate.css */
+
+body {
+  background-image: url('../images/userbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-color: #d4edda; /* Light green background */
+  font-family: Arial, sans-serif;
+}
+
+
+ .container {
+  background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  width: 50%; /* Adjust the width as needed */
+  max-width: 600px; /* Optional: limits the maximum width */
+}
+
+
+h2 {
+  text-align: center;
+  color: #155724; /* Dark green */
+}
+
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #155724; /* Dark green */
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #155724; /* Dark green */
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #138f5c; /* Slightly lighter green on hover */
+}

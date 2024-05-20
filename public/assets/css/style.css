@@ -1,0 +1,28 @@
+/* Center the form container */
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form styling */
+form {
+    width: 100%; /* Full width of the containing element */
+}
+
+.alert {
+    margin-top: 20px; /* Add some margin to the alert */
+}
+
+.mb-2 {
+    margin-bottom: 1rem; /* Margin between form groups */
+}
+
+h2 {
+    margin-bottom: 1rem; /* Margin below the heading */
+}
+
+.btn {
+    width: 100%; /* Full width button */
+}
